@@ -38,6 +38,13 @@ go through deeplink and bypass validation and open "attack-wizley.com". If you s
                     android:scheme="deeplink" />
             </intent-filter>
 ```
+### Goal
+```kotlin
+override fun onPageFinished(view: WebView?, url: String?) {
+        super.onPageFinished(view, url)
+
+        val isSuccess = url?.toUri()?.host == "attack-wizley.com"
+```
 
 ### Stage1
 ```kotlin
