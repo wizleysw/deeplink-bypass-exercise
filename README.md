@@ -8,6 +8,37 @@
 go through deeplink and bypass validation and open "attack-wizley.com". If you succeed, you may see SUCCEESS else FAIL.
 
 ## Stage
+### deeplink entry
+```xml
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="stage1"
+                    android:scheme="deeplink" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="stage2"
+                    android:scheme="deeplink" />
+            </intent-filter>
+```
+
 ### Stage1
 ```kotlin
     private fun isValidHost(url: String): Boolean {
