@@ -1,4 +1,5 @@
 # Deeplink Bypass Test
+https://datatracker.ietf.org/doc/html/rfc3986
 
 ## How to install apk?
 1. install apk from https://github.com/wizleysw/deeplink-test/blob/main/app/release/app-release.apk
