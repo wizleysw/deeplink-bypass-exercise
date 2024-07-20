@@ -1,4 +1,4 @@
-# Deeplink Bypass Test
+# Deeplink Bypass Exercise
 https://datatracker.ietf.org/doc/html/rfc3986
 
 ## How to install apk?
